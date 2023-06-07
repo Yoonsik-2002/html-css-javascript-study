@@ -10,6 +10,7 @@
         <style>
             /*
             CSS 초기화 - 
+            
             브라우저 마다 default padding값과 default margin값이 다르다.
             때문에, 내가 설정한 CSS가 모든 브라우저에서 동일하게 보이도록 하기 위해
             먼저 다음과 같은 코드를 이용하여, padding값과 margin값을 기본적으로 0으로 초기화 해준다.
@@ -38,8 +39,8 @@
         <style>
             /*
             html/css 에서 Id와 Class의 차이 -
-            Id는 한 요소에만 사용하기 위해, Class는 여러 요소에 중복사용하기 위해 사용하는 스타일 정의법이다. 
             
+            Id는 한 요소에만 사용하기 위해, Class는 여러 요소에 중복사용하기 위해 사용하는 스타일 정의법이다. 
             ex)
             #footer {
                 clear:both;
@@ -70,10 +71,18 @@
             */
             #main_header {
                 width: 960px;
-                margin: 0 auto;
+                /*
+                margin: 0 auto; - 
+                
+                margin:_ 에서 _는 좌우위아래 여백을 의미하는 숫자이다. 이때, 0을 지정했다는 것은 좌우위아래 여백을 지정하지 않는다는 뜻이다.
+                그리고, auto는 가로 중앙에 배치한다는 뜻이다. 그리고, 자연스럽게(자동으로) 좌우 여백은 균등하게 배분된다. 
+                때문에, margin: 0 auto; 는 위 아래 여백 없이, 좌우 여백을 균등하게 배분하여 가로 중앙에 배치해라! 라는 뜻이 된다. 
+                그럼, margin: 100px auto;는 무슨 뜻일까?
+                위 아래 여백은 100px로 지정하고, 좌우 여백을 균등하게 배분하여 가로 중앙에 배치해라! 라는 뜻이 된다.
+                */
+                margin: 0 auto; 
                 height: 160px;
                 position: relative; /*position은 각 요소들을 배치하는 방법을 정의하는 속성이다.*/
-                /* background-color: blue; */
             }
             #main_header > #title {
                 position: absolute;
