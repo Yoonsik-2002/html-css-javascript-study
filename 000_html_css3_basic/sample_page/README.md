@@ -60,5 +60,13 @@
 ### Class와 Id의 차이 
 `Id`는 한 요소에만 사용하기 위해, `Class`는 여러 요소에 중복사용하기 위해 사용하는 스타일 정의법이다.<br>
 아래 그림을 보면 이해하기 더욱 쉬울 것이다.<br>
+<br>
+
+![Slide1](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/4c7e5f19-b579-4914-8d6f-83f8ae2a1c55)<br>
+<br>
+
+각 요소들을 `header`, `content`, `footer`, `side-bar`라는 id로 구분하여 고유하게 사용한다.<br>
+특정 컨텐츠를 반복하는 경우, class를 이용하여, 같은 CSS를 적용시킨다.<br>
+
 
 
