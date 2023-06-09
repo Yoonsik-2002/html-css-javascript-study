@@ -199,6 +199,7 @@
   
   당연히 첫 번째 태그 요소 `first`와 세 번째 태그 요소 `third`에는 해당 속성값(`position: relative;`)을 적용하지 않았기<br> 
   때문에, 디폴트로 적용되는 `position` 속성값, `static`이 그대로 적용되어 있다.<br>
+  <br>
   
   ### `absolute`
   `position`속성의 속성값 중 하나인 `absolute`는 부모중에 `static`이 아닌 요소의 위치를 기준으로 상대적인 `offset`속성을<br>
