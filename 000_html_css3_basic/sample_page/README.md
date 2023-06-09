@@ -53,6 +53,7 @@
 > `padding`값과 `margin`값을 실질적으로 적용하고 싶은 원하는 값으로 초기화 한다.<br><br>
 > 이러한 절차를 거치면, 원하지 않는 여백이 적용되는 현상도 없앨 수 있으며,  어느 브라우저에서 보더라도, <br>
 > 화면에 나타나는 결과가 동일하게 나타나도록 할 수 있다.<br>
+
 <br>
 
 ### Class와 Id의 차이 
@@ -65,7 +66,7 @@
 
 각 요소들을 `header`, `content`, `footer`, `side-bar`라는 id로 구분하여 고유하게 사용한다.<br>
 특정 컨텐츠를 반복하는 경우, class를 이용하여, 같은 CSS를 적용시킨다.<br>
-<br>
+<br><br>
 
 ### `margin: 0 auto;` - 위 아래 여백없이, 좌우 여백을 균등하게 배분하여 가로 중앙에 배치하라!
 `margin:_`에서 `_`는 좌우,위아래 여백을 의미하는 숫자이다. 이때, 0을 지정하였다는 것은 좌우,위아래 여백을<br>
@@ -96,6 +97,26 @@
   <header id= "main_header">
 </body>
 ```
+<br>
+
+![7906B9B0-61F8-4D89-81D0-9764E8742675](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/ef34619f-9063-45f6-abeb-e7d97a5861a7)<br>
+<br><br>
+
+### `position` - 태그 요소의 위치를 설정하는 속성
+`position`속성을 다루기 전에 `offset`속성에 대해 먼저 다뤄보도록 하겠다.<br>
+
+### `offset`속성
+`offset`속성은 기준이 되는 곳으로부터 얼마나 떨어지게 할 것인지를 정할 때 사용하는 속성이다. <br>
+`top`, `right`, `bottom`, `left` 가 있다.<br>
+
+이 `offset`속성의 사용을 예시로 들면 다음과 같다.<br>
+
+> **`top: 10px` - 기준이 되는 `top(상단)`에서 아래로 `10px`만큼 떨어져 있는 위치**<br>
+
+### `position`속성
+이 `position`속성이 가질 수 있는 속성값으로는 `static`, `relative`, 'absolute`, `fixed` 이렇게 4가지 종류가 있다.<br>
+
+
 
 
 
