@@ -151,7 +151,7 @@
   
   ![스크린샷(3)](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/94ae6303-b993-4332-b660-fe9a87db95fd)<br>
 
-  #### `relative`
+  ### `relative`
   `position`속성의 속성값 중 하나인 `relative`는 **현재 위치에서 상대적인 `offset`속성을 줄 수 있다.**<br>
   위 코드 상에서 두 번째 태그 요소인 `second`에 아래로`10px (top: 10px;)`, 오른쪽으로`10px(left: 10px;)`의<br>
   `offset`을 적용해 보도록 하겠다.<br>
