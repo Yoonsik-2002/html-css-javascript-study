@@ -284,8 +284,52 @@
   
   ![스크린샷(10)](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/9208bb6c-07d4-4674-bd5b-8642ea115c03)<br>
    태그요소 `second`의 원점이 브라우저에 맞춰진 것을 확인해 볼 수 있다.<br>
-  
-  
+   
+   현재 태그요소 `second`의 부모태그는 존재하지 않는다. 이러한 경우, 브라우저의 좌 상단의 좌표가 (0, 0)이 된다.<br>
+   최종적으로 정리해보면, 아래와 같은 `absolute`속성값의 성질을 이해할 수 있다. <br>
+   
+   - ##### 1) 부모의 `position`속성값이 모두 `static`일 경우, 브라우저의 좌 상단의 좌표가 (0, 0)이 된다.<br>
+     ![스크린샷(10)](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/c35db9ef-2d6f-417a-b94c-efc49c1a5d12)<br>
+     
+   - ##### 2) 부모의 `position`속성값 중에 `static`이 아닌 값이 있는 경우, 해당 부모의 좌 상단의 좌표가 (0, 0)이 된다.<br>
+     ```html
+     <!DOCTYPE html>
+     <html lang="en">
+       <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>test position</title>
+          <style>
+              #first {
+                  border: 1px solid red;
+                  position: relative;
+              }
+              #first > #second {
+                  border: 1px solid blue;
+                  position: absolute;
+                  top: 0px;
+                  left: 0px;
+              }
+              #third {
+                  border: 1px solid green;
+              }
+          </style>
+       </head>
+    
+       <body>
+          <div id="first">first
+              <div id="second">second</div>
+          </div>
+          <div id="third">third</div>
+       </body>
+     </html>
+     ```
+     <br>
+     
+     ![스크린샷(13)](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/63a9a39d-00d3-411e-94ef-107da57dddaa)!<br>
+
+     
 
 
   
