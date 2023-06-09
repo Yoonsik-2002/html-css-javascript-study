@@ -4,7 +4,6 @@
 브라우저마다 `default padding`값과 `default margin`값이 존재하며, 해당 값들은 각 브라우저마다 상이하다.<br>
 때문에, 아래 사진처럼, 아무런 값을 지정해주지 않았는데도, 기본적으로 요소에 여백이 생기는 현상이 발생한다.<br>
 ```html
-...
 <head>
   <style>
     #main_header {
@@ -18,7 +17,6 @@
 
 <body>
   <header id= "main_header">
-    ...
 </body>
 ```
 <br>
@@ -67,6 +65,37 @@
 
 각 요소들을 `header`, `content`, `footer`, `side-bar`라는 id로 구분하여 고유하게 사용한다.<br>
 특정 컨텐츠를 반복하는 경우, class를 이용하여, 같은 CSS를 적용시킨다.<br>
+<br>
+
+### `margin: 0 auto;` - 위 아래 여백없이, 좌우 여백을 균등하게 배분하여 가로 중앙에 배치하라!
+`margin:_`에서 `_`는 좌우,위아래 여백을 의미하는 숫자이다. 이때, 0을 지정하였다는 것은 좌우,위아래 여백을<br>
+지정하지 않는다는 뜻이다.<br>
+그리고, `auto`는 가로 중앙에 좌우 여백을 자동으로 균등하게 배분하여 배치한다는 뜻이다.<br>
+
+때문에, 이 둘을 조합한 `margin: 0 auto;`는 **위 아래 여백 없이, 좌우 여백을 균등하게 배분하여 가로 중앙에 배치하라!**<br>
+라는 뜻이 된다.<br>
+
+그럼, `margin: 100px auto;`는 무슨 의미일까?<br>
+위 아래 여백은 `100px`로 지정하고, 좌우 여백을 균등하게 배분하여 가로 중앙에 배치하라! 라는 뜻이 된다.<br>
+
+다음은 `header`요소에 `margin: 0 auto;`를 적용하여 배치한 모습이다. 
+```html
+<head>
+  <style>
+    #main_header {
+      width: 960px;
+      height: 160px;
+      margin: 0 auto;
+      position: relative;
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <header id= "main_header">
+</body>
+```
 
 
 
