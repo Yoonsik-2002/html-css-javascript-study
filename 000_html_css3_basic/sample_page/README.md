@@ -116,7 +116,7 @@
 - ### `position`속성
   이 `position`속성이 가질 수 있는 속성값으로는 `static`, `relative`, 'absolute`, `fixed` 이렇게 4가지 종류가 있다.<br>
   
-  #### `static`
+  ### `static`
   `position`속성을 부여하지 않았을 때, 기본적으로 가지는 디폴트 값이다. 아래 코드의 경우, 3개의 `div`요소의 `position`값은<br>
   `static`이다. (`position` 속성을 부여하지 않았기 때문)<br>
   ```html
@@ -330,6 +330,8 @@
      
      ![스크린샷(13)](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/63a9a39d-00d3-411e-94ef-107da57dddaa)!<br>
 
+  쉽게 정리하자면, 태그요소의 `position`속성 값이 `absolute`인 경우, 해당 태그요소의 (`position: static`이 아닌) 부모가<br>
+  존재하는 경우를 제외하면, 브라우저의 좌 상단이 (0, 0)이 된다.<br>
      
 
 
