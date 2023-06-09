@@ -105,7 +105,7 @@
 ### `position` - 태그 요소의 위치를 설정하는 속성
 `position`속성을 다루기 전에 `offset`속성에 대해 먼저 다뤄보도록 하겠다.<br>
 
-#### `offset`속성
+- #### `offset`속성
 `offset`속성은 기준이 되는 곳으로부터 얼마나 떨어지게 할 것인지를 정할 때 사용하는 속성이다. <br>
 `top`, `right`, `bottom`, `left` 가 있다.<br>
 
@@ -113,7 +113,7 @@
 
 > **`top: 10px` - 기준이 되는 `top(상단)`에서 아래로 `10px`만큼 떨어져 있는 위치**<br>
 
-#### `position`속성
+- #### `position`속성
 이 `position`속성이 가질 수 있는 속성값으로는 `static`, `relative`, 'absolute`, `fixed` 이렇게 4가지 종류가 있다.<br>
 
 
