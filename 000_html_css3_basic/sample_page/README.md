@@ -119,7 +119,88 @@
   #### `static`
   `position`속성을 부여하지 않았을 때, 기본적으로 가지는 디폴트 값이다. 아래 코드의 경우, 3개의 `div`요소의 `position`값은<br>
   `static`이다. (`position` 속성을 부여하지 않았기 때문)<br>
+  ```html
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>test position</title>
+        <style>
+            #first {
+                border: 1px solid red;
+            }
+            #second {
+                border: 1px solid blue;
+            }
+            #third {
+                border: 1px solid green;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="first">first</div>
+        <div id="second">second</div>
+        <div id="third">third</div>
+    </body>
+  </html>
+  ```
+  <br>
   
+  ![스크린샷(3)](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/94ae6303-b993-4332-b660-fe9a87db95fd)<br>
+
+  #### `relative`
+  `position`속성의 속성값 중 하나인 `relative`는 **현재 위치에서 상대적인 `offset`속성을 줄 수 있다.**<br>
+  위 코드 상에서 두 번째 태그 요소인 `second`에 아래로`10px (top: 10px;)`, 오른쪽으로`10px(left: 10px;)`의<br>
+  `offset`을 적용해 보도록 하겠다.<br>
+
+  ```html
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>test position</title>
+        <style>
+            #first {
+                border: 1px solid red;
+            }
+            #second {
+                border: 1px solid blue;
+                position: relative;
+                top: 10px;
+                left: 10px;
+            }
+            #third {
+                border: 1px solid green;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="first">first</div>
+        <div id="second">second</div>
+        <div id="third">third</div>
+    </body>
+  </html>
+  ```
+  <br>
+  
+  ![스크린샷(5)](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/c348a104-c7ea-4966-9e74-2c3b2bc85a9f)<br>  
+  위 코드와 같이 두 번째 태그 요소 `second`에 `relative`속성값을 적용하고, `offset`을 `top: 10px`, `left: 10px`로<br>
+  적용하니, `second`가 원래(현재) 위치를 기준으로, 아래로 `10px`, 오른쪽으로 `10px`만큼 이동한 것을 알 수 있었다.<br>
+  
+  해당 이동은 `relative`의 성질에 따라, `relative`를 적용하기 전 현재 위치(아무런 `position` 속성값을 적용하지 않은 <br>
+  디폴트로 적용되는 위치)로부터 상대적으로 아래로 `10px`, 오른쪽으로 `10px` 만큼 지정한 `offset`속성 값을 따라<br>
+  이루어진 것이다.<br>
+  
+  당연히 첫 번째 태그 요소 `first`와 세 번째 태그 요소 `third`에는 해당 속성값(`position: relative;`)을 적용하지 않았기<br> 
+  때문에, 디폴트로 적용되는 `position` 속성값, `static`이 그대로 적용되어 있다.<br>
+  
+
   
 
 
