@@ -106,7 +106,7 @@
 `position`속성을 다루기 전에 `offset`속성에 대해 먼저 다뤄보도록 하겠다.<br>
 
 - ### `offset`속성
-  `offset`속성은 기준이 되는 곳으로부터 얼마나 떨어지게 할 것인지를 정할 때 사용하는 속성이다. <br>
+  `offset`속성은 기준이 되는 곳으로부터 얼마나 떨어지게 할 것인지를 정할 때 사용하는 속성이다.<br>
   `top`, `right`, `bottom`, `left` 가 있다.<br>
 
   이 `offset`속성의 사용을 예시로 들면 다음과 같다.<br>
@@ -200,8 +200,94 @@
   당연히 첫 번째 태그 요소 `first`와 세 번째 태그 요소 `third`에는 해당 속성값(`position: relative;`)을 적용하지 않았기<br> 
   때문에, 디폴트로 적용되는 `position` 속성값, `static`이 그대로 적용되어 있다.<br>
   
-
+  ### `absolute`
+  `position`속성의 속성값 중 하나인 `absolute`는 부모중에 `static`이 아닌 요소의 위치를 기준으로 상대적인 `offset`속성을<br>
+  줄 수 있다.(`static`이 아닌 부모 요소의 위치를 기준으로 상대적인 `offset`속성 적용)<br>
+  
+  `relative`와 `absolute` 둘 다 `offset`속성을 적용할 수 있지만, `absolute`의 경우, `offset`속성의 기준이 되는 위치가<br>
+  조건에 따라 달라질 수 있다.<br>
+  
+  먼저, 두 번째 태그요소 `second`의 `position`속성값을 `absolute`로 지정해주고, 아무런 `offset`속성값도 적용하지 않으면<br>
+  어떤 결과가 나타나는지 보도록 하겠다.<br>
+  
+  ```html
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>test position</title>
+        <style>
+            #first {
+                border: 1px solid red;
+            }
+            #second {
+                border: 1px solid blue;
+                positon: absolute;
+            }
+            #third {
+                border: 1px solid green;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="first">first</div>
+        <div id="second">second</div>
+        <div id="third">third</div>
+    </body>
+  </html>
+  ```
+  <br>
+  
+  ![스크린샷(11)](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/fc0d212e-6626-4b52-8c97-343479699e0f)<br>
+  이건 뭔가 ... 상상도 못한 결과가 나왔다. 태그 요소 `second`에 `absolute`속성값을 적용한 순간, 해당 요소는 다른 태그요소들과는<br>
+  다른 층으로 이동한 것이라고 한다. 설명을 추가하면, 3차원 좌표계라면 `second`의 z축이 변경되었고, `second`가 다른 층으로<br>
+  붕 떠버리자, 그다음 태그요소인 `third`가 그 빈자리를 채운것 이라고 한다.<br>
+  이때, `second`의 x, y 위치는 변하지 않았다는 것을 명심해야 한다. (다른 층으로 이동한 것일 뿐... 현재 기존 위치는 변화x)<br>
+  
+  그럼, 이번엔 `offset`속성 값을 적용해 보도록 하겠다.<br>
+  
+  ```html
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>test position</title>
+        <style>
+            #first {
+                border: 1px solid red;
+            }
+            #second {
+                border: 1px solid blue;
+                positon: absolute;
+                top: 0px;
+                left: 0px;
+            }
+            #third {
+                border: 1px solid green;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="first">first</div>
+        <div id="second">second</div>
+        <div id="third">third</div>
+    </body>
+  </html>
+  ```
+  <br>
+  
+  ![스크린샷(10)](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/9208bb6c-07d4-4674-bd5b-8642ea115c03)<br>
+   태그요소 `second`의 원점이 브라우저에 맞춰진 것을 확인해 볼 수 있다.<br>
+  
   
 
 
+  
+  
 
