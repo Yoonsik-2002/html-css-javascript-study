@@ -105,7 +105,7 @@
 ### `position` - 태그 요소의 위치를 설정하는 속성
 `position`속성을 다루기 전에 `offset`속성에 대해 먼저 다뤄보도록 하겠다.<br>
 
-- ### `offset`속성
+### `offset`속성
   `offset`속성은 기준이 되는 곳으로부터 얼마나 떨어지게 할 것인지를 정할 때 사용하는 속성이다.<br>
   `top`, `right`, `bottom`, `left` 가 있다.<br>
 
@@ -113,12 +113,14 @@
 
   > **`top: 10px` - 기준이 되는 `top(상단)`에서 아래로 `10px`만큼 떨어져 있는 위치**<br>
 
-- ### `position`속성
-  이 `position`속성이 가질 수 있는 속성값으로는 `static`, `relative`, 'absolute`, `fixed` 이렇게 4가지 종류가 있다.<br>
+<br>
+
+### `position`속성
+이 `position`속성이 가질 수 있는 속성값으로는 `static`, `relative`, 'absolute`, `fixed` 이렇게 4가지 종류가 있다.<br>
   
-  ### `static`
-  `position`속성을 부여하지 않았을 때, 기본적으로 가지는 디폴트 값이다. 아래 코드의 경우, 3개의 `div`요소의 `position`값은<br>
-  `static`이다. (`position` 속성을 부여하지 않았기 때문)<br>
+### `static`
+`position`속성을 부여하지 않았을 때, 기본적으로 가지는 디폴트 값이다. 아래 코드의 경우, 3개의 `div`요소의 `position`값은<br>
+`static`이다. (`position` 속성을 부여하지 않았기 때문)<br>
   ```html
   <!DOCTYPE html>
   <html lang="en">
@@ -135,7 +137,7 @@
                 border: 1px solid blue;
             }
             #third {
-                border: 1px solid green;
+                  border: 1px solid green;
             }
         </style>
     </head>
@@ -345,6 +347,13 @@
   
   이처럼 태그요소가 자동으로 올라가지며 빈 공간을 채우는 성질을 쉽게 "브라우저 내의 중력"이라고 표현하겠다.<br>
   이 브라우저 내의 중력은 위 케이스를 보면 알 수 있듯이, 위쪽으로 작용한다.<br>
+  
+  앞서 설명하였듯이, `fixed`역시 `absolute`와 마찬가지로 적용 시, z축 속성을 변화시키는 특성을 가진 `position`<br>
+  속성의 속성값이다.<br>
+  그렇다면, `position`속성의 속성값, `fixed`와 `absolute`의 차이는 어떻게 될까?<br>
+  
+  `fixed`는 `absolute`와는 달리, 무조건 브라우저의 좌표를 따른다. 게다가, 스크롤도 무시하기 때문에, 화면상에서<br>
+  보았을 시, 고정된 것처럼 보인다는 특성이 있다.<br>
   
   
 
