@@ -509,11 +509,117 @@
 
 설정해준 대로면, `first`의 `margin-bottom: 150px`와 `third`의 `margin-top: 150px`에 의해 총 300px 만큼의 간격이<br>
 나타나야 하는데, 마치 설정해둔 두 `margin`값이 겹쳐진것과 같은 현상이 발생하였다.<br>
-이러한 결과는 정상적인 현상으로, **마진 겹침 현상**이라 한다. 아래 설명에서 더욱 자세히 다뤄보도록 하겠다.<br>
+이러한 결과는 정상적인 현상으로, **마진(margin) 겹침 현상**이라 한다. 아래 설명에서 더욱 자세히 다뤄보도록 하겠다.<br>
 <br><br>
 
-### Margin 겹침 현상과 `position`속성의 `absolute`, `fixed`속성값
-  
+### 마진(margin) 겹침 현상과 `position`속성의 `absolute`, `fixed`
+`absolute`나 `fixed`속성을 가지는 태그 요소에 마진(margin)값을 적용할 때에는 주의가 필요하다.<br>
+다음 예시를 보도록 하자.<br>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>test position</title>
+        <style>
+            #first {
+                border: 1px solid red;
+                margin: 10px;
+            }
+            #second {
+                border: 1px solid blue;
+                margin: 10px;
+            }
+            #third {
+                border: 1px solid green;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="first">first</div>
+        <div id="second">second</div>
+        <div id="third">third</div>
+    </body>
+</html>
+```
+<br>
+
+![스크린샷1](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/ed453640-c3ab-4e0e-99d0-e2cd6fef77e6)<br>
+위 예시를 보면 알 수 있듯이, 코드 상으로는 태그요소 `first`, `second`, `third` 모두 `margin: 10px;`를 통해 상하좌우에<br>
+10px만큼의 margin이 적용되어있다.<br>
+
+하지만, 해당 코드를 실행한 결과를 보면, 각 요소들의 위 아래 간격은`margin-bottom: 10px` + `margin-top: 10px` = 20px가<br>
+아닌 10px로, 서로의 `margin-bottom: 10px`와 `margin-top: 10px`가 겹쳐져 있는 듯한 형태를 띄는 것을 알 수 있다.<br>
+
+이러한 현상을 **마진(margin) 겹침 현상** 이라고 한다.<br>
+
+그럼, 이 상태에서 태그 요소 `second`에 `absolute(또는 fixed)`속성값을 적용한 코드와 해당 코드의 결과를 보도록 하자.<br>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>test position</title>
+        <style>
+            #first {
+                border: 1px solid red;
+                margin: 10px;
+            }
+            #second {
+                border: 1px solid blue;
+                position: absolute;
+                margin: 10px;
+            }
+            #third {
+                border: 1px solid green;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="first">first</div>
+        <div id="second">second</div>
+        <div id="third">third</div>
+    </body>
+</html>
+```
+<br>
+
+![스크린샷2](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/a02f77db-3076-437f-85ef-2c8d5cc5536f)<br>
+태그요소 `second`에 `position: absolute`속성값을 적용하니, 위 사진과 같은 결과가 나타났다.<br>
+계속 이해했다 시피, `absolute`속성값에 의해, 해당 속성값이 적용된 태그요소 `second`의 z축 속성이 변형되어, 공중으로 뜨고<br>
+`second`가 공중으로 뜨면서 생긴 빈 공간으로 브라우저 내의 중력에 의해 태그요소 `third`가 위로 올라가 빈 공간을 채우게 된다.<br>
+`absolute`속성값이 적용되지 않은 태그요소 `first`와 `third`는 정상적으로 마진 겹침 현상이 발생해, 서로 10px의 간격을 두고<br>
+떨어져 있다! 여기까지는 오늘 공부한 내용을 토대로 자연스럽게 그려지는 내용이다.<br>
+
+문제는 `absolute`속성값이 적용되어 있는 `second`요소이다. `absolute`속성값이 적용되니, 태그요소 `first`와의 간격에 있어,<br>
+마진 겹침 현상이 일어나지 않았다!<br>
+`first`의 `margin-bottom: 10px;`와 `second`의 `margin-top: 10px;`의 마진 겹침 현상이 일어나지 않아, 두 태그 요소의<br>
+간격이 20px가 된 것이다! 이러한 현상은 `fixed`속성값에도 똑같이 적용된다.<br>
+
+그럼 어떻게 해야 할까? 아니 왜 헷갈리게 `absolute`랑 `fixed`속성값에만 이런일이 일어나지?<br>
+
+그래서 `positon`의 4개의 속성값들 중, `absolute`와 `fixed`에게만 공통으로 주어지는 속성이 있다. 바로 `offset`속성이다!<br>
+사실은 `absolute`나 `fixed`속성값을 사용할 때, `offset`속성을 함께 사용하기 때문에 이러한 `absolute`나 `fixed` 속성값을<br>
+적용한 태그요소에 마진 겹침 현상이 일어나지 않는 이슈는 크게 신경쓰지 않아도 된다.<br>
+
+
+
+
+
+
+
+
+
 
 
 
