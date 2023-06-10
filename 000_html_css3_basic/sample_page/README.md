@@ -149,7 +149,7 @@
   ```
   <br>
   
-  ![스크린샷(3)](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/94ae6303-b993-4332-b660-fe9a87db95fd)<br>
+ ![사진1](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/5afb92a0-df14-4aea-a83b-0c0924bf98dd)<br>
 
   ### `relative`
   `position`속성의 속성값 중 하나인 `relative`는 **현재 위치에서 상대적인 `offset`속성을 줄 수 있다.**<br>
@@ -189,7 +189,7 @@
   ```
   <br>
   
-  ![스크린샷(5)](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/c348a104-c7ea-4966-9e74-2c3b2bc85a9f)<br>  
+  ![사진2](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/c4d47adf-bd35-4b68-998f-d6324fab38d3)<br>  
   위 코드와 같이 두 번째 태그 요소 `second`에 `relative`속성값을 적용하고, `offset`을 `top: 10px`, `left: 10px`로<br>
   적용하니, `second`가 원래(현재) 위치를 기준으로, 아래로 `10px`, 오른쪽으로 `10px`만큼 이동한 것을 알 수 있었다.<br>
   
@@ -242,7 +242,7 @@
   ```
   <br>
   
-  ![스크린샷(11)](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/fc0d212e-6626-4b52-8c97-343479699e0f)<br>
+  ![사진4](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/eb5e1e17-b285-4da5-8cb0-f6fa70e5a5b2)<br>
   이건 뭔가 ... 상상도 못한 결과가 나왔다. 태그 요소 `second`에 `absolute`속성값을 적용한 순간, 해당 요소는 다른 태그요소들과는<br>
   다른 층으로 이동한 것이라고 한다. 설명을 추가하면, 3차원 좌표계라면 `second`의 z축이 변경되었고, `second`가 다른 층으로<br>
   붕 떠버리자, 그다음 태그요소인 `third`가 그 빈자리를 채운것 이라고 한다.<br>
@@ -283,14 +283,14 @@
   ```
   <br>
   
-  ![스크린샷(10)](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/9208bb6c-07d4-4674-bd5b-8642ea115c03)<br>
+  ![사진3](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/f06782da-d4eb-4fc1-94d5-c1f5a1b1d803)<br>
    태그요소 `second`의 원점이 브라우저에 맞춰진 것을 확인해 볼 수 있다.<br>
    
    현재 태그요소 `second`의 부모태그는 존재하지 않는다. 이러한 경우, 브라우저의 좌 상단의 좌표가 (0, 0)이 된다.<br>
    최종적으로 정리해보면, 아래와 같은 `absolute`속성값의 성질을 이해할 수 있다. <br>
    
    - ##### 1) 부모의 `position`속성값이 모두 `static`일 경우, 브라우저의 좌 상단의 좌표가 (0, 0)이 된다.<br>
-     ![스크린샷(10)](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/c35db9ef-2d6f-417a-b94c-efc49c1a5d12)<br>
+     ![사진3](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/0178ad87-dbfe-464b-b4bb-aadf891f305f)<br>
      
    - ##### 2) 부모의 `position`속성값 중에 `static`이 아닌 값이 있는 경우, 해당 부모의 좌 상단의 좌표가 (0, 0)이 된다.<br>
      ```html
@@ -328,7 +328,7 @@
      ```
      <br>
      
-     ![스크린샷(13)](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/63a9a39d-00d3-411e-94ef-107da57dddaa)!<br>
+     ![사진5](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/53babeda-c682-41a8-8cce-dea70f55b6ca)<br>
 
   쉽게 정리하자면, 태그요소의 `position`속성 값이 `absolute`인 경우, 해당 태그요소의 (`position: static`이 아닌) 부모가<br>
   존재하는 경우를 제외하면, 브라우저의 좌 상단이 (0, 0)이 된다.<br>
