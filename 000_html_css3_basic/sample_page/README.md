@@ -132,7 +132,32 @@
   `margin-bottom: 30px;`<br>
   `margin-left: 40px;`<br>
 
-- ##### 3개의 `margin` 속성값을 가질 경우 - 
+- ##### 3개의 `margin` 속성값을 가질 경우 - `top`, `right` 와 `left`, `bottom` 순으로 적용
+  ```html
+  ex) margin : 10px, 20px, 30px;
+  ```
+  `margin-top: 10px;`<br>
+  `margin-right: 20px;`<br>
+  `margin-bottom: 30px;`<br>
+  `margin-left: 20px;`<br>
+  
+- ##### 2개의 `margin` 속성값을 가질 경우 - `top`, `bottom`과 `right`, `left` 순으로 적용
+  ```html
+  ex) margin: 10px, 20px;
+  ```
+  `margin-top: 10px;`<br>
+  `margin-right: 20px;`<br>
+  `margin-bottom: 10px;`<br>
+  `margin-left: 20px;`<br>
+  
+- ##### 1개의 `margin`속성값을 가질 경우 - 모든 마진값을 해당 값으로 같게 적용
+  ```html
+  ex) margin: 10px
+  ```
+  `margin-top: 10px;`<br>
+  `margin-right: 10px;`<br>
+  `margin-bottom: 10px;`<br>
+  `margin-left: 10px;`<br>
   
 <br><br>
 
