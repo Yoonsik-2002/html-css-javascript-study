@@ -116,7 +116,7 @@
 <br>
 
 ### `position`속성
-이 `position`속성이 가질 수 있는 속성값으로는 `static`, `relative`, 'absolute`, `fixed` 이렇게 4가지 종류가 있다.<br>
+이 `position`속성이 가질 수 있는 속성값으로는 `static`, `relative`, `absolute`, `fixed` 이렇게 4가지 종류가 있다.<br>
   
 ### `static`
 `position`속성을 부여하지 않았을 때, 기본적으로 가지는 디폴트 값이다. 아래 코드의 경우, 3개의 `div`요소의 `position`값은<br>
