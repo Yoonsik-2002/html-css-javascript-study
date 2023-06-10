@@ -245,7 +245,7 @@
   ![사진4](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/eb5e1e17-b285-4da5-8cb0-f6fa70e5a5b2)<br>
   이건 뭔가 ... 상상도 못한 결과가 나왔다. 태그 요소 `second`에 `absolute`속성값을 적용한 순간, 해당 요소는 다른 태그요소들과는<br>
   다른 층으로 이동한 것이라고 한다. 설명을 추가하면, 3차원 좌표계라면 `second`의 z축이 변경되었고, `second`가 다른 층으로<br>
-  붕 떠버리자, 그다음 태그요소인 `third`가 그 빈자리를 채운것 이라고 한다.<br>
+  붕 떠버리자, 그다음 태그요소인 `third`가 z축 속성이 변경되어, 떠있는 `second`바로 아래로 그 빈자리를 채운것 이라고 한다.<br>
   이때, `second`의 x, y 위치는 변하지 않았다는 것을 명심해야 한다. (다른 층으로 이동한 것일 뿐... 현재 기존 위치는 변화x)<br>
   
   그럼, 이번엔 `offset`속성 값을 적용해 보도록 하겠다.<br>
@@ -330,9 +330,24 @@
      
      ![사진5](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/53babeda-c682-41a8-8cce-dea70f55b6ca)<br>
 
-  쉽게 정리하자면, 태그요소의 `position`속성 값이 `absolute`인 경우, 해당 태그요소의 (`position: static`이 아닌) 부모가<br>
-  존재하는 경우를 제외하면, 브라우저의 좌 상단이 (0, 0)이 된다.<br>
-     
+  쉽게 정리하자면, 태그요소의 `position`속성 값이 `absolute`인 경우, 해당 태그요소의 부모 요소가 존재하고, <br>
+  이 부모요소의 속성값이 `position: static`이 아닌 경우를 제외하면, 모두 브라우저의 좌 상단이 (0, 0)이 된다.<br>
+  <br>
+  
+  ### `fixed`
+  `position`속성의 속성값 중 하나인 `fixed`는 브라우저에 대해서 위치를 잡는다. 또, 스크롤에 영향을 받지 않고,<br>
+  고정된 위치를 가진다. <br>
+  
+  `fixed`역시, `absolute`처럼 z축 속성이 변한다. 태그요소 `first`, `second`, `third`의 `position`속성값이<br>
+  `static`일 때에는 각 태그 요소들은 서로 맞물려 있지만, 이 상태에서 태그요소 `second`에 `absolute` 속성값을<br>
+  부여하면, `second`의 z축 속성이 변경되어, `second`가 공중으로 띄어지고, `second`가 공중으로 띄어지며 생긴<br>
+  빈 공간으로 태그요소 `third`가 자동으로 올라가져, 해당 빈 공간을 채우게 된다.<br>
+  
+  이처럼 태그요소가 자동으로 올라가지며 빈 공간을 채우는 성질을 쉽게 "브라우저 내의 중력"이라고 표현하겠다.<br>
+  이 브라우저 내의 중력은 위 케이스를 보면 알 수 있듯이, 위쪽으로 작용한다.<br>
+  
+  
+
 
 
   
