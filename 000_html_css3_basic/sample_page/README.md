@@ -101,7 +101,7 @@
 
 ![7906B9B0-61F8-4D89-81D0-9764E8742675](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/ef34619f-9063-45f6-abeb-e7d97a5861a7)<br>
 
-추가적으로, `margin`속성을 이용한 스타일을 한줄로 설정할 수 있게 해주는 **마진 축약 표현(margin shorthand)** 를<br>
+추가적으로, `margin`속성을 이용한 스타일을 한줄로 설정할 수 있게 해주는 **마진 축약 표현(margin shorthand)** 을<br>
 설명해 보도록 하겠다.<br>
 
 기존에는 `margin`속성을 이용하여 스타일을 지정할 때 다음과 같은 방법을 사용하였다.<br>
