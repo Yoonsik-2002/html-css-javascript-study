@@ -415,7 +415,102 @@
   
   `fixed`는 `absolute`와는 달리, 무조건 브라우저의 좌표를 따른다. 게다가, 스크롤도 무시하기 때문에, 화면상에서<br>
   보았을 시, 고정된 것처럼 보인다는 특성이 있다.<br>
+  실제 코드를 통해서 해당 특성을 확인해 보도록 하겠다.<br>
   
+  ```html
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>test position</title>
+        <style>
+            #first {
+                border: 1px solid red;
+                margin: 150px 100px;
+            }
+            #second {
+                border: 1px solid blue;
+                /* position: fixed; */
+            }
+            #third {
+                border: 1px solid green;
+                margin: 150px 100px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="first">first</div>
+        <div id="second">second</div>
+        <div id="third">third</div>
+    </body>
+</html>
+```
+<br>
+
+![스크린샷1](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/28676d1f-df31-4130-b6f6-c24287b0783c)<br>
+태크요소 `second`에 `position`속성의 `fixed`속성값을 적용해주기 이전에는 위 사진과 같이, `first`와 `third`는<br>
+위 아래로 150px, 좌 우로는 100px 만큼의 `margin`을 가지고 있는 형태로 간격을 유지하며 배치되어 있고,<br>
+
+`second`는 위 아래는 자동적으로 `first`, `third`사이에 끼어있는 형태로, 각 요소들과 150px의 간격을 둔 채로<br>
+배치되어 있으며, CSS초기화를 해주지 않있기 때문에 좌 우로는 브라우저의 기본적인 디폴트 값이 적용되어 약간의 <br>
+여백이 생겨있는 상태이다.<br>
+
+그렇다면, 태그요소 `second`에 `fixed`속성값을 적용하면 어떤 결과가 나타날까? 아래 결과를 보도록 하자.<br>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>test position</title>
+        <style>
+            #first {
+                border: 1px solid red;
+                margin: 150px 100px;
+            }
+            #second {
+                border: 1px solid blue;
+                position: fixed;
+            }
+            #third {
+                border: 1px solid green;
+                margin: 150px 100px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="first">first</div>
+        <div id="second">second</div>
+        <div id="third">third</div>
+    </body>
+</html>
+```
+<br>
+
+![스크린샷2](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/a2e52547-5998-4464-bf7c-7d388bb5ad8c)<br>
+`second`에 `fixed`속성값을 적용하자, `second`의 z축 속성이 변경되어, z축 방향을 공중에 뜨게되며, 그렇게 해서 생긴<br>
+빈공간을 브라우저 내의 중력에 의해 자동으로 `third`가 채우게 된다.<br>
+
+그리고, `second`는 `fixed` 속성값이 적용되어, 스크롤에 영향받지 않고, 해당 위치에 고정된다.<br>
+
+여기서 캐치해야할 점은 위의 내용 말고도 더 있다. 먼저, `fixed` 속성값을 적용하자, `second`요소의 `border` 테두리가<br>
+내용(second)에 맞게 변경되었다. 이는 `absolute` 속성값을 적용해도 동일하게 나타나는 현상이다.<br>
+
+그리고, 분명히, `first`와 `third`의 위, 아래 `margin`값을 150px로 설정해 주었는데, `second`가 `fixed`에 의해 <br>
+공중에 뜨고, 그 빈 공간을 채우기 위해 올라온 `third`와 원래 있던 `first`의 간격이 그대로 150px이다.<br>
+
+설정해준 대로면, `first`의 `margin-bottom: 150px`와 `third`의 `margin-top: 150px`에 의해 총 300px 만큼의 간격이<br>
+나타나야 하는데, 마치 설정해둔 두 `margin`값이 겹쳐진것과 같은 현상이 발생하였다.<br>
+이러한 결과는 정상적인 현상으로, 마진 겹침현상이라 한다. 아래 설명에서 더욱 자세히 다뤄보도록 하겠다.<br>
+<br><br>
+
+### 마진 겹침 현상과 `position`속성의 `absolute`, `fixed`속성값
   
 
 
