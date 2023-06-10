@@ -100,7 +100,43 @@
 <br>
 
 ![7906B9B0-61F8-4D89-81D0-9764E8742675](https://github.com/Yoonsik-2002/html-css-javascript-study/assets/83572199/ef34619f-9063-45f6-abeb-e7d97a5861a7)<br>
+
+추가적으로, `margin`속성을 이용한 스타일을 한줄로 설정할 수 있게 해주는 **마진 축약 표현(margin shorthand)** 를<br>
+설명해 보도록 하겠다.<br>
+
+기존에는 `margin`속성을 이용하여 스타일을 지정할 때 다음과 같은 방법을 사용하였다.<br>
+```java
+<style>
+#example {
+    border: px solid orange;
+    margin-top: 25px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    margin-left: 100px;
+}
+</style>
+```
+<br>
+
+`margin-top : 25`, 이런식으로 하나하나 지정하여 설정해주는 방법은 오타가 날 가능성도 높아지고, 비효율적이다.<br>
+그래서, 이를 해결하기 위해 사용하는 방법이 마진 축약 표현이다.<br>
+
+이 마진 축약 표현은 `margin`속성을 이용한 스타일을 한줄에 설정할 수 있게 해준다.<br>
+
+- ##### 4개의 `margin`속성값을 가질 경우 - `top`, `right`, `bottom`, `left` 순으로 적용
+  ```html
+  ex) margin: 10px, 20px, 30px, 40px;
+  ```
+  `margin-top: 10px;`<br>
+  `margin-right: 20px;`<br>
+  `margin-bottom: 30px;`<br>
+  `margin-left: 40px;`<br>
+
+- ##### 3개의 `margin` 속성값을 가질 경우 - 
+  
 <br><br>
+
+
 
 ### `position` - 태그 요소의 위치를 설정하는 속성
 `position`속성을 다루기 전에 `offset`속성에 대해 먼저 다뤄보도록 하겠다.<br>
