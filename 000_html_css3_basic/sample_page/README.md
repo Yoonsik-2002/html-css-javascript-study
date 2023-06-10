@@ -512,7 +512,7 @@
 이러한 결과는 정상적인 현상으로, **마진 겹침 현상**이라 한다. 아래 설명에서 더욱 자세히 다뤄보도록 하겠다.<br>
 <br><br>
 
-### 마진 겹침 현상과 `position`속성의 `absolute`, `fixed`속성값
+### Margin 겹침 현상과 `position`속성의 `absolute`, `fixed`속성값
   
 
 
