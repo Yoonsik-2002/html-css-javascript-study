@@ -611,6 +611,7 @@
 그래서 `positon`의 4개의 속성값들 중, `absolute`와 `fixed`에게만 공통으로 주어지는 속성이 있다. 바로 `offset`속성이다!<br>
 사실은 `absolute`나 `fixed`속성값을 사용할 때, `offset`속성을 함께 사용하기 때문에 이러한 `absolute`나 `fixed` 속성값을<br>
 적용한 태그요소에 마진 겹침 현상이 일어나지 않는 이슈는 크게 신경쓰지 않아도 된다.<br>
+<br><br>
 
 
 
