@@ -104,8 +104,16 @@
         
         <!---메뉴1--->
         <style>
-            #main_gnb > ul {
-                overflow: hidden;
+            #main_gnb > ul {    
+                overflow: hidden;    /* 해당 html 요소 밖을 빠져나오는 컨텐츠를 숨긴다. */
+            }
+            #main_gnb > ul > li {
+                float: left;    /* 각 객체를 왼쪽(왼쪽부터 오른쪽 순)으로 정렬하여 화면에 띄어준다. */
+            }
+            #main_gnb > ul > li > a {
+                display: block;    /*  */
+                border: 1px solid black;
+                padding: 2px 10px;    
             }
             
                 
