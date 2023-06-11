@@ -630,7 +630,9 @@
   `display`속성값이 `inline`인 요소는 새로운 줄(line)에서 시작하지 않으며, 요소의 너비 또한 해당 라인 전체가 아닌,<br>
   해당 HTML 요소의 내용(content)만큼만 차지한다.<br>
   
-  
+이때, 기본 `display`속성값이 `block`인 요소일지라도, 해당 요소의 `display`속성값을 `inline`으로 변경이 가능하고,<br>
+그 반대인 경우인 `display`속성값이 `inline`인 요소 또한 해당 요소의 `display`속성값을 `block`으로 변경이 가능하다.<br>
+
 
 
 
