@@ -613,8 +613,24 @@
 적용한 태그요소에 마진 겹침 현상이 일어나지 않는 이슈는 크게 신경쓰지 않아도 된다.<br>
 <br><br>
 
+### `display`속성
+`display`속성은 웹 페이지의 레이아웃(layout)을 결정해주는 CSS의 중요한 속성 중 하나이다.<br>
+이 속성은 해당 HTML요소가 웹 브라우저에 언제 어떻게 보이는가를 결정해 준다.<br>
 
+**대부분의 HTML요소는 이 `display`속성의 기본 값으로, 블록(`block`)/인라인(`inline`) 중 하나의 값을 가진다.**<br>
 
+- #### 기본적인 `display`속성 값이 `block`인 HTML 요소들(`display: block;`)
+  **`<div>`** **`<h1>`** **`<p>`** **`<ul>`** **`<ol>`** **`<form>`** <br> 
+  
+  `display`속성값이 `block`인 요소는 언제나 새로운 줄(line)에서 시작하며, 해당 라인의 모든 너비를 차지한다.<br>
+  
+- #### 기본적인 `display`속성 값이 `inline`인 HTML 요소들(`display: inline;`)
+  **`<span>`** **`a`** **`img`**<br>
+  
+  `display`속성값이 `inline`인 요소는 새로운 줄(line)에서 시작하지 않으며, 요소의 너비 또한 해당 라인 전체가 아닌,<br>
+  해당 HTML 요소의 내용(content)만큼만 차지한다.<br>
+  
+  
 
 
 
